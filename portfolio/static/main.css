@@ -10,3 +10,108 @@ body {
     border: 1px solid #fff;
     cursor: pointer;
 }
+
+.boxone{
+    position: relative;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+}
+
+.boxone .cardone {
+    position: relative;
+    background: rgba(255,255,255,0.1);
+    min-height: 400px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-top: 1px solid rgba(255,255,255,0.75);
+    border-left: 1px solid rgba(255,255,255,0.75);
+    border-radius: 20px;
+    box-shadow: 0 25px 45px rgba(255, 255, 255, 0.05);
+    transform-style: preserve-3d;
+}
+
+.elements{
+    position: absolute;
+    top: 50px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255,255,255,0.1);
+    transform: translateZ(80px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-top: 1px solid rgba(255,255,255,0.75);
+    border-left: 1px solid rgba(255,255,255,0.75);
+    border-radius: 10px;   
+    box-shadow: 0 25px 45px rgba(255, 255, 255, 0.05);
+}
+
+.elements.bg::before
+{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('rocket-lunch.png');
+    background-size: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.elements.imgBx
+{
+    top: 0;
+    left: initial;
+    right: 120px;
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    transform: translateZ(120px);
+}
+
+.elements.imgBx img
+{
+    /* position: absolute; */
+    width: calc(100% - 0px);
+    border-radius: 8px;
+    max-height: 100%;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-top: 1px solid rgba(255,255,255,0.75);
+    border-left: 1px solid rgba(255,255,255,0.75);
+    box-shadow: 0 25px 45px rgba(255, 255, 255, 0.05);
+}
+
+.elements.name{
+    top: 124px;
+    left: initial;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    transform: translateZ(100px);
+    background: transparent;
+    backdrop-filter: blur(0px);
+    border: none;
+    box-shadow: none;
+    color: #e1dadd;
+}
+
+.elements.content{
+    top: initial;
+    left: initial;
+    bottom: 0;
+    width: 70%;
+    min-height: 200px;
+    padding: 10px;
+    transform: translateZ(180px);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elements.content p {
+    position: relative;
+    color: #e1dadd;
+    font-size: 0.85em;
+}

@@ -19,16 +19,18 @@
         <h3>My Projects</h3>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, libero.</p>
         {% for project in projects %}
-            <div class="col-md-4 p-4">
-                <div class="card bg-black card-project">
-                    <img src="{{project.image.url}}" alt="{{project.title}}" class="card-img-top">
-                    <div class="card-body">
-                        <h2>{{project.title}}</h2>
-                        <p>{{project.description}}</p>
-                        {% if project.url %}
-                            <a href="{{project.url}}" class="btn btn-light rounded-0 btn-sm" target="_blank">{{project.url}}</a>
-                        {% endif %}
-                    </div>
+            <div class="col-md-4 p-3 boxone">
+                <div class="elements bg"></div>
+                <div class="elements imgBx">
+                    <img src="{{project.image.url}}" alt="{{project.title}}">
+                </div>
+                <div class="elements name">
+                    <h2>{{project.title}}</h2>
+                </div>
+                <div class="elements content">
+                    <p>{{project.description}}</p>
+                </div>
+                <div class="cardone">
                 </div>
             </div>
         {% endfor %} 

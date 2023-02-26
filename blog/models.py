@@ -6,3 +6,6 @@ class Post(models.Model):
     descripcion = models.TextField()
     imagen = models.ImageField(upload_to='blog/images')
     date = models.DateTimeField(datetime.date.today)
+    
+    def __str__(self) -> str:
+        return self.title

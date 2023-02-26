@@ -1,0 +1,24 @@
+ 
+ -Genera los archivos requeridos para el funcionamiento de la app
+ pip freeze > requirements.txt
+
+--Lanza la aplicacion .
+ python manage.py runserver 
+
+-Compila y genera las tablas en db.sqllite
+python manage.py makemigrations
+python manage.py migrate
+
+--Crea el usuario del admin de la aplicacion
+python manage.py createsuperuser
+
+--Crea nuevo proyecto
+python manage.py startapp portfolio
+python manage.py startapp blog
+
+-Crea la app
+django-admin startproject django_porfolio .
+
+--Crea una maquina virtual para trabajar.
+pip install virtualenv
+python -m virtualenv venv  //En la ruta donde se instalo la app
